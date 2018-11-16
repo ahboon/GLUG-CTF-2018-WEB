@@ -1,4 +1,4 @@
-##Inspection
+## Inspection
 ```
 Head over to the link below to find the flag.
 https://expect-glugctf.netlify.com/
@@ -6,7 +6,7 @@ https://expect-glugctf.netlify.com/
 This is a typical HTML source code viewing flag. CTRL+U will give you the flag. ``<div><!--The flag is GLUG{3el(0me_1o_$h3_N3xT_7eve7}--></div>``
 
 
-##Go Get It!
+## Go Get It!
 ```
 Head over to the link below to find the flag.
 http://104.248.49.223:7070/
@@ -48,7 +48,7 @@ Source code:
 This is a challenge which expects a GET request with the variable 'flag', and its value equals to 'true'. Therefore, the solve for this is http://104.248.49.223:7070/?flag=true. ``GLUG{4lw4y5_fuzz_f0r_h1dd3n_p4r4m373r5}	``
 
 
-##Go Get It!
+## Rotten
 ```
 Head over to the link below to find the flag.
 https://rotplayer-glugctf.netlify.com/
@@ -102,7 +102,7 @@ Source Code:
 
 This is a challenge which has a the flag hardcoded in its javascript. However, it is ROT13-ed and therefore you are required to provide the CORRECT flag to 'match' the logic. Putting the matching condition from the source code into cyberchef (google it), will give you the flag. ``GLUG{cl13n7_51d3_l061n_w17h_r0713!}``
 
-##The Videogame
+## The Videogame
 ```
 One fine day,Rocket Raccoon found the video game that Groot was so obsessed with.Unfortunately,Groot had set a password on it. In the password hint,he had provided link to a website. Raccoon could not find anything in the website. Can you help him find it, so that he can play the videogame?
 
@@ -111,7 +111,7 @@ http://104.248.49.223:7071/
 This is a challenge which required the user to change the cookie. Examining to cookie, it shows ``user:unknown``. Changing it to ``user:ROOT`` and reloading the page will give us the flag. ``GLUG{I_@m_7r55t}``
 
 
-##Referals
+## Referals
 ```
 Misha recently got placed at Google.So she started refering her friends for incoming job posts in the company.She hid a secret in this website for those who got the job after her referal.The secret contains the place where she and her friends will be having party for their new jobs.
 
@@ -122,7 +122,7 @@ http://104.248.49.223:8081/
 This challenge requires us to craft a HTTP header with referer = https://www.google.com in it. Simply do a CURL request with ``--referer https://www.google.com`` in the curl request to the site and flag will be give. ``GLUG{Refendrum_@_007}``
 
 
-##MI7
+## MI7
 ```
 Olny Agents are allowed.
 
@@ -153,7 +153,7 @@ Disallow: /exploits/network/QuantumInjection.pdf
 Following the URL ``https://mi7secret-glugctf.netlify.com/a7_vault.html`` will give us a BASE64 encoded string: ``R0xVR3tiMDc1X2M0bl8xNm4wcjNfN2gzX3J1bDM1fQ==``, subsequently, decoding it will give us a flag. ``GLUG{b075_c4n_16n0r3_7h3_rul35}``
 
 
-##Musically
+## Musically
 ```
 We can have a list of songs.And a search input where a user can search for a song along with details.
 Link to the Challenge
@@ -201,7 +201,7 @@ Link to the source code
 This is a typical command injection challenge. There are not filters, and therefore command injection can be done directly. Supplying ``;ls;`` will allow us to list files. Since ``flag.txt`` is in the same directory, doing a ``;cat flag.txt;`` will allow us to read the flag. Therefore, the flag is: ``GLUG{you_never_gonna_find_song}``
 
 
-##New Blogger
+## New Blogger
 ```
 Misha is a travel blogger.She made a website for her blog.Minan was very impressed with it but on detailed inspection found that there existed a vulnerability.
 Can you find the flag exploiting the same?
@@ -214,7 +214,7 @@ http://104.248.49.223:7074/
 This challenge is a Local File Inclusion (LFI) challenge. The LFi was identified when playing around with the links in the site. Clicking on ``About Us`` will load ``About Us`` page. But looking at the URL, ``http://104.248.49.223:7074/?page=about-us.php`` was seen, and changing it to ``http://104.248.49.223:7074/?page=../../../../../../../../etc/flag`` gives us the flag. ``GLUG{7h3_54m3_0ld_f1l3_1nclu510n}``
 
 
-##NinjaGirl
+## NinjaGirl
 ```
 NInJa_gIrl thinks MD5 is amazing.She uses one salt to hash all her data. All you need to do is enter two different names and prove her that she’s wrong?
 Link to the Challenge
@@ -290,7 +290,7 @@ echo "test" . $B;
 ```
 Therefore, the solve for this would be ``?str1[]=1&str2[]=2``, giving us the flag ``Glug{7i5e_1s_####123_7577}``.
 
-##The Infinity War
+## The Infinity War
 ```
 Thanos has acquired half of the gems and soon coming on the earth for the Time stone.All the marvel heroes have therfore united to fight with him.
 But as they needed one person to lead them,they organised an election to choose one leader.
@@ -305,7 +305,7 @@ This is a typical SQL injection question. Requiring the user to do a UNION SELEC
 
 
 
-##Pingmaster
+## Pingmaster
 ```
 Phonix made a new tool called “Pingmaster”. He hosted it in his server, as he is a poor person and couldn’t afford multiple servers he also kept his secret in it. But he thinks it really secure.
 Prove him wrong.
