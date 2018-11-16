@@ -3,7 +3,7 @@
 Head over to the link below to find the flag.
 https://expect-glugctf.netlify.com/
 ```
-This is a typical HTML source code viewing flag. CTRL+U will give you the flag. ``<div><!--The flag is GLUG{3el(0me_1o_$h3_N3xT_7eve7}--></div>``
+This is a typical HTML source code view flag. Viewing source will give you the flag. ``<div><!--The flag is GLUG{3el(0me_1o_$h3_N3xT_7eve7}--></div>``
 
 
 ## Go Get It!
@@ -100,7 +100,7 @@ Source Code:
 </html>
 ```
 
-This is a challenge which has a the flag hardcoded in its javascript. However, it is ROT13-ed and therefore you are required to provide the CORRECT flag to 'match' the logic. Putting the matching condition from the source code into cyberchef (google it), will give you the flag. ``GLUG{cl13n7_51d3_l061n_w17h_r0713!}``
+This is a challenge which has the flag hardcoded in its javascript. However, it is ROT13-ed and therefore you are required to provide the CORRECT flag to 'match' the logic. Putting the matching condition from the source code into cyberchef (google it), will give you the flag. ``GLUG{cl13n7_51d3_l061n_w17h_r0713!}``
 
 ## The Videogame
 ```
@@ -108,7 +108,7 @@ One fine day,Rocket Raccoon found the video game that Groot was so obsessed with
 
 http://104.248.49.223:7071/
 ```
-This is a challenge which required the user to change the cookie. Examining to cookie, it shows ``user:unknown``. Changing it to ``user:ROOT`` and reloading the page will give us the flag. ``GLUG{I_@m_7r55t}``
+This is a challenge which requires the user to change the cookie. Examining the cookie, it shows ``user:unknown``. Changing it to ``user:ROOT`` and reloading the page will give us the flag. ``GLUG{I_@m_7r55t}``
 
 
 ## Referals
@@ -119,7 +119,7 @@ Minan is Misha's boyfriend.Minan wants to reach Misha asap.Since Minan didnt get
 
 http://104.248.49.223:8081/
 ```
-This challenge requires us to craft a HTTP header with referer = https://www.google.com in it. Simply do a CURL request with ``--referer https://www.google.com`` in the curl request to the site and flag will be give. ``GLUG{Refendrum_@_007}``
+This challenge requires us to craft a HTTP header with referer = https://www.google.com in it. Simply do a CURL request with ``--referer https://www.google.com`` in the curl request to the site and the flag will be given. ``GLUG{Refendrum_@_007}``
 
 
 ## MI7
@@ -198,7 +198,7 @@ Link to the source code
   </body>
 </html>
 ```
-This is a typical command injection challenge. There are not filters, and therefore command injection can be done directly. Supplying ``;ls;`` will allow us to list files. Since ``flag.txt`` is in the same directory, doing a ``;cat flag.txt;`` will allow us to read the flag. Therefore, the flag is: ``GLUG{you_never_gonna_find_song}``
+This is a typical command injection challenge. There are no filters, and therefore command injection can be done directly. Supplying ``;ls;`` will allow us to list files. Since ``flag.txt`` is in the same directory, doing a ``;cat flag.txt;`` will allow us to read the flag. Therefore, the flag is: ``GLUG{you_never_gonna_find_song}``
 
 
 ## New Blogger
@@ -211,7 +211,7 @@ Hint: Flag is in /etc/flag
 Link
 http://104.248.49.223:7074/
 ```
-This challenge is a Local File Inclusion (LFI) challenge. The LFi was identified when playing around with the links in the site. Clicking on ``About Us`` will load ``About Us`` page. But looking at the URL, ``http://104.248.49.223:7074/?page=about-us.php`` was seen, and changing it to ``http://104.248.49.223:7074/?page=../../../../../../../../etc/flag`` gives us the flag. ``GLUG{7h3_54m3_0ld_f1l3_1nclu510n}``
+This challenge is a Local File Inclusion (LFI) challenge. The LFI was identified when playing around with the links in the site. Clicking on ``About Us`` will load ``About Us`` page. But looking at the URL, ``http://104.248.49.223:7074/?page=about-us.php`` was seen, and changing it to ``http://104.248.49.223:7074/?page=../../../../../../../../etc/flag`` gives us the flag. ``GLUG{7h3_54m3_0ld_f1l3_1nclu510n}``
 
 
 ## NinjaGirl
@@ -272,7 +272,7 @@ Flag is in format: Glug{}
   </body>
 </html>
 ```
-This is basically a challenge where you are required to overcome the code logic. To match the logics, we would need to supply the GET parameters with arrays. Because when PHP converts and array into string, it would be ``Array`` instead of the values in it. Therefore, a literal conversion with the salt would still give the same hashes. The following code snippet can be run and you would see ``testArray`` as the eventual text, even though both have different values.
+This is basically a challenge where you are required to overcome the PHP code logic. To match the logics, we would need to supply the GET parameters with arrays. Because when PHP converts an array into string, it would be a string value called ``Array`` instead of the values in it. Therefore, a literal conversion with the salt would still give the same hashes. The following code snippet can be tested and you would see ``testArray`` as the eventual text, even though both arrays have different values.
 
 ```
 <?php
@@ -301,7 +301,7 @@ http://167.99.149.173/
 Flag is in the format Glug{}
 ```
 
-This is a typical SQL injection question. Requiring the user to do a UNION SELECT injection. The payload required is ``' UNION SELECT IhidItHere,2,3,4 FROM Leaders;##``, giving us the flag ``Glug{3@st_!r0nm@n_1s_3est}``
+This is a typical SQL injection question. Requiring the user to do a UNION SELECT injection. After enumerating columns and table names using ``' UNION SELECT table_name,column_name,2,3 FROM information_schema.columns;##``, the payload required is ``' UNION SELECT IhidItHere,2,3,4 FROM Leaders;##``, giving us the flag ``Glug{3@st_!r0nm@n_1s_3est}``
 
 
 
@@ -313,7 +313,7 @@ Link to the challenge
 http://104.248.49.223:7090/
 Tip: Flag is in /etc/flag
 ```
-This is yet another command injection challenge, but there are filters. Giving symbols like ``&``,``SPACE``, or ``|`` would trigger the filter. However, since the commands are executed and the standard output is then printed, we can trying the ``%0A`` method. ``%0A`` would add a new line, like a press of the ENTER key. Since ``SPACE`` is not allowed, we will have to use ``$IFS$9`` to insert spaces. But for this to work, instead of sending it through the form, we will have to send the GET request directly to prevent our symbols from be encoded. Therefore, the payload for the command would be ``http://104.248.49.223:7090/?host=%0Acat$IFS$9/etc/flag``, and the flag is ``GLUG{c40mm4nd_1nj3c710n_w17h0u7_5c4p35_15_l337}``.
+This is yet another command injection challenge, but there are filters. Giving symbols like ``&``,``SPACE``, or ``|`` would trigger the filter. However, since the commands are executed and the standard output is then printed, we can try the ``%0A`` escape method. ``%0A`` would add a new line, like a press of the ENTER key. Since ``SPACE`` is not allowed, we will have to use ``$IFS$9`` to insert spaces. But for this to work, instead of sending it through the form, we will have to send the GET request directly to prevent our symbols from being URL encoded. Therefore, the payload for the command would be ``http://104.248.49.223:7090/?host=%0Acat$IFS$9/etc/flag``, and the flag is ``GLUG{c40mm4nd_1nj3c710n_w17h0u7_5c4p35_15_l337}``.
 
 
 THATS ALL FOLKS! I LOVE WEB!
